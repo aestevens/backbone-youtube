@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/underscore/underscore-min.js"></script>
+  <script src="node_modules/backbone/backbone-min.js"></script>
+  <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <title>ShifTube</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="header">
+          <h1>ShifTube</h1>
+          <p style="transform: rotate(0.25turn);">&#9906;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script id="beer-template" type="text/x-handlebars-template">
+    <div class="img-container">
+      <img src="{{image_url}}">
+    </div>
+    <div class="content-container">
+      <a href="#/beers/{{_id}}" data-id=>
+      <p class="beer-name">{{name}}</p></a>
+      <input class="beer-name edit-mode" value="{{name}}">
+      <p>{{style}} - {{abv}}% ABV</p>
+    </div>
+    <i class="fa fa-times remove"></i>
+    <i class="fa fa-pencil-square-o edit"></i>
+  </script>
+
+  <script id="beer-detail-template" type="text/x-handlebars-template">
+    <a href="#"><i class="fa fa-chevron-left"></i> back</a>
+    <div class="img-container">
+      <img class="beer-detail-img" src="{{image_url}}">
+    </div>
+    <div class="content-container">
+      <h3 class="beer-name">{{name}}</h3>
+      <input class="beer-name edit-mode" value="{{name}}">
+      <p>{{style}} - {{abv}}% ABV</p>
+
+      <div class="reviews-list"></div>
+
+      <div class="form-group">
+        <label>User Name</label>
+        <input type="text" class="form-control" id="review-name-input" placeholder="name">
+      </div>
+      <div class="form-group">
+        <label>Review Notes</label>
+        <input type="text" class="form-control" id="review-notes-input" placeholder="notes">
+      </div>
+      <button class="btn btn-primary submit-review">submit</button>
+    </div>
+  </script>
+
+  <script id="review-template" type="text/x-handlebars-template">
+    <div class="content-container">
+      <span class="review-name">{{name}} - </span>
+      <span class="reviews-notes">{{text}}</span>
+      <i class="fa fa-times remove"></i>
+    </div>
+  </script>
+
+  <!-- <script src="models/BeerModel.js"></script>
+  <script src="models/ReviewModel.js"></script>
+  <script src="collections/BeersCollection.js"></script>
+  <script src="collections/ReviewsCollection.js"></script>
+  <script src="models/AppModel.js"></script>
+  <script src="views/AppView.js"></script>
+  <script src="views/BeerView.js"></script>
+  <script src="views/ReviewView.js"></script>
+  <script src="views/BeerDetailView.js"></script>
+  <script src="routers/router.js"></script> -->
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "backbone-youtube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aestevens/backbone-youtube.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "latest",
+    "bootstrap": "latest",
+    "handlebars": "latest",
+    "jquery": "latest",
+    "octicons": "^7.1.0",
+    "underscore": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/aestevens/backbone-youtube/issues"
+  },
+  "homepage": "https://github.com/aestevens/backbone-youtube#readme"
+}
